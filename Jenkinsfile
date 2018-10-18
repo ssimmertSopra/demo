@@ -10,11 +10,10 @@ pipeline {
             }
         }
 
-  stages {
-    stage('compile') {
-      steps {
-        sh 'mvn clean install'
-      }
-    }
+		stage('compile') {
+			steps {
+				sh 'mvn clean install'
+			}
+		}
     }
 }
