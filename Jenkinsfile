@@ -11,11 +11,9 @@ pipeline {
         }
 
 		stage('compile') {
-			steps {
-				def mvn_version = 'M3'
-				withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
-					sh 'mvn clean install'
-				}
+			def mvn_version = 'M3'
+			withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+				sh 'mvn clean install'
 			}
 		}
     }
