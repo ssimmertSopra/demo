@@ -17,7 +17,7 @@ public class DemoApplication {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello Demo Applikation with Docker";
+        return "Hello Demo Applikation with Docker ";
     }
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
