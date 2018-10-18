@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Deploy') {
       	steps {
-     		sh 'mvn deploy:deploy-file -DgroupId=com.example.innershift -DartifactId=demo -Dversion=0.0.1-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=0.0.0.0:8081/repository/maven-snapshots -Dfile=target/demo-0.0.1-SNAPSHOT.jar'
+     		sh 'mvn deploy:deploy-file -DgroupId=com.example.innershift -DartifactId=demo -Dversion=0.0.1-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=http://0.0.0.0:8081/repository/maven-snapshots -Dfile=target/demo-0.0.1-SNAPSHOT.jar'
   		}      
   	}
   }
