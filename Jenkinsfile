@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       	steps {
-        	sh 'mvn dockerfile:build'
+        	sh 'mvn clean install'
       	}
     }
     stage('Deploy') {
