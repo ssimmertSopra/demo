@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Deploy') {
       	steps {
-     		sh 'mvn deploy:deploy-file -DgroupId=com.somecompany -DartifactId=project -Dversion=1.0.0 -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=http://localhost:8081/repository/maven-releases -Dfile=target/demo-1.0.0.jar'
+     		sh 'mvn deploy:deploy-file -DgroupId=com.somecompany -DartifactId=demo -Dversion=0.0.1-SNAPSHOT -DgeneratePom=true -Dpackaging=jar -DrepositoryId=nexus -Durl=http://localhost:8081/repository/maven-snapshots -Dfile=target/demo-0.0.1-SNAPSHOT.jar'
   		}      
   	}
   }
